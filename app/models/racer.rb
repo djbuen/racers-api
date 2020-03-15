@@ -48,4 +48,9 @@ class Racer
       false
     end
   end
+
+  def delete
+    racer = Racer.collection.doc(racer_id)
+    racer.delete
+  end
  end
