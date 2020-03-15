@@ -21,7 +21,15 @@ class Racer
     @collection = firestore.col "racers"
   end
 
- def save
+  def self.all
+   racers = []
+   Racer.collection.get do |racer|
+     racers << Racer.new(racer.data)
+   end
+   racers
+  end
+
+  def save
     if valid?
       racer_ref = Racer.collection.doc racer_id
       racer_id = Racer.collection.get.count + 1
@@ -35,4 +43,4 @@ class Racer
       false
     end
   end
-end
+ end
