@@ -24,7 +24,7 @@ class Racer
  def save
     if valid?
       racer_ref = Racer.collection.doc racer_id
-      racer_id = Racer.collection.get().count + 1
+      racer_id = Racer.collection.get.count + 1
       racer_ref.set \
         first_name: first_name,
         last_name:  last_name,
