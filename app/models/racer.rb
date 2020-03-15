@@ -29,6 +29,11 @@ class Racer
    racers
   end
 
+  def self.find id
+    racer = Racer.collection.doc(id).get
+    Racer.new(racer.data) if racer.data
+  end
+
   def save
     if valid?
       racer_ref = Racer.collection.doc racer_id
