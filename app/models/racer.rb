@@ -34,6 +34,10 @@ class Racer
     Racer.new(racer.data) if racer.data
   end
 
+  def create
+    save
+  end
+
   def save
     if valid?
       racer_ref = Racer.collection.doc racer_id
