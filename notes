@@ -1,5 +1,5 @@
 #use ruby 2.5.3
-#use postman (7.6.0)
+#use postman (>7.6.0)
 #use bundler (1.17.3)
 
 #STEPS
@@ -16,7 +16,7 @@
 #8. download postman
 #9. import racers.postman_collection.json
 #10. play around with endpoint
-#NOTE: when playing around with endpoint will took some time in responding max 1.5minute
+#NOTE: when playing around with endpoints will take some time in responding max 1.5minute
 #11. can navigate to https://console.firebase.google.com/u/2/project/xclimb-92d8c/database/firestore/data~2Fracers~2FaBqcaPxBAwhNlVLERdBP
 #login using credentials given below
 ## firestore account
