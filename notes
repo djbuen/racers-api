@@ -5,7 +5,7 @@ use bundler (1.17.3)
 #STEPS
 1. unzip project racers.zip(example location /var/www/racers-api) or clone https://github.com/djbuen/racers-api.git 
 2. update path constant for google firestore credential in .env file(line 2);
- NOTE: if you wont use my credential, you can use your own just update .env file
+ NOTE: if you wont use my credential on firestore, you can use your own just update .env file
 	export GOOGLE_APPLICATION_CREDENTIALS="/var/www/racers-api/cred2.json" - for generated key in service accounts
 	export GOOGLE_CLOUD_PROJECT=xclimb-92d8c - project id
  sample:
