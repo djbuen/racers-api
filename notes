@@ -1,23 +1,28 @@
 #use ruby 2.5.3
-
-#firestore account
-#username: dave.xclimb@gmail.com
-#pass: xclimb2020
+#use postman (7.6.0)
+#use bundler (1.17.3)
 
 #STEPS
-#1. install ruby 2.5.3
-#2. install bundler
-#3. run `bundle install` in root folder
-#3.1 run `rake db:migrate`
-#4. source notes && rails s 
+#1. unzip project racers.zip(example location /var/www/racers-api) or clone https://github.com/djbuen/racers-api.git 
+#2. update path constant for google firestore credential in .env file(line 2);
+# sample:
+# export GOOGLE_APPLICATION_CREDENTIALS="[PATH_WHERE_YOU_UNZIP_PROJECT]/racers-api/cred2.json" -> export GOOGLE_APPLICATION_CREDENTIALS="/var/www/racers-api/cred2.json"
+#3. install ruby 2.5.3
+#4. install bundler
+#5. run `bundle install` in root folder
+#6.1 run `rake db:migrate`
+#7. run `source .env && rails s`
 # once the server is started can play endpoints via postman	
-#5. download postman
-#6. import racers.postman_collection.json
-#7. play around with endpoint
-#NOTE: when playing around with endpoint will took some time in responding max 1.5minutes
-#8. can navigate to https://console.firebase.google.com/u/2/project/xclimb-92d8c/database/firestore/data~2Fracers~2FaBqcaPxBAwhNlVLERdBP
-#login using credentials given above
-#9. check for data being manipulated through api
+#8. download postman
+#9. import racers.postman_collection.json
+#10. play around with endpoint
+#NOTE: when playing around with endpoint will took some time in responding max 1.5minute
+#11. can navigate to https://console.firebase.google.com/u/2/project/xclimb-92d8c/database/firestore/data~2Fracers~2FaBqcaPxBAwhNlVLERdBP
+#login using credentials given below
+## firestore account
+## username: dave.xclimb@gmail.com
+## pass: xclimb2020
+#12. check for data being manipulated through api
 
 #Routes 
 #  Prefix Verb   URI Pattern             Controller#Action
@@ -27,7 +32,3 @@
 #  PATCH         /racers/:id(.:format)   racers#update
 #  PUT           /racers/:id(.:format)   racers#update
 #  DELETE        /racers/:id(.:format)   racers#destroy
-
-export DISABLE_SPRING=true
-export GOOGLE_APPLICATION_CREDENTIALS="/var/www/racers-api/cred2.json"
-export GOOGLE_CLOUD_PROJECT=xclimb-92d8c
