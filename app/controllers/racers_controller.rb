@@ -1,7 +1,8 @@
 class RacersController < ApplicationController
+    include Response
     def index
         racers = Racer.all
-        render json: racers, status: :ok
+        json_response(racers)
     end
 
     def create
@@ -14,7 +15,7 @@ class RacersController < ApplicationController
             flash[:error] = "Unable to add racer"
             status = :expectation_failed
         end
-        render json: flash, status: status
+        json_response(flash, status)
     end
 
     def update
@@ -27,7 +28,7 @@ class RacersController < ApplicationController
             flash[:error] = "Unable to update racer"
             status = :expectation_failed
         end
-        render json: flash, status: status
+        json_response(flash, status)
     end
 
     def destroy
@@ -40,7 +41,7 @@ class RacersController < ApplicationController
             flash[:error] = "Unable to delete racer"
             status = :expectation_failed
         end
-        render json: flash, status: status
+        json_response(flash, status)
     end
 
     private
