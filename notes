@@ -1,0 +1,32 @@
+#use ruby 2.5.3
+
+#firestore account
+#username: dave.xclimb@gmail.com
+#pass: xclimb2020
+
+#STEPS
+#1. install ruby 2.5.3
+#2. install bundler
+#3. run `bundle install` in root folder
+#4. source notes && rails s 
+# once the server is started can play endpoints via postman	
+#5. download postman
+#6. import racers.postman_collection.json
+#7. play around with endpoint
+#NOTE: when playing around with endpoint will took some time in responding max 1.5minutes
+#8. can navigate to https://console.firebase.google.com/u/2/project/xclimb-92d8c/database/firestore/data~2Fracers~2FaBqcaPxBAwhNlVLERdBP
+#login using credentials given above
+#9. check for data being manipulated through api
+
+#Routes 
+#  Prefix Verb   URI Pattern             Controller#Action
+#  racers GET    /racers(.:format)       racers#index
+#  POST          /racers(.:format)       racers#create
+#  racer  GET    /racers/:id(.:format)   racers#show
+#  PATCH         /racers/:id(.:format)   racers#update
+#  PUT           /racers/:id(.:format)   racers#update
+#  DELETE        /racers/:id(.:format)   racers#destroy
+
+export DISABLE_SPRING=true
+export GOOGLE_APPLICATION_CREDENTIALS="/var/www/racers-api/cred2.json"
+export GOOGLE_CLOUD_PROJECT=xclimb-92d8c

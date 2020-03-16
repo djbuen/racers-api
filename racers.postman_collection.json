@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "b48e799a-7c81-4c3c-adcb-22d7e82732fb",
+		"name": "racers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "racer list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/racers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"racers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add racer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\": \"dave12\",\n\t\"last_name\": \"san12\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/racers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"racers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit racer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"first_name\": \"dave77\",\n\t\"last_name\": \"san777\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/racers/3SSf4ARr3h9XhJ4VSovi",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"racers",
+						"3SSf4ARr3h9XhJ4VSovi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove racer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/racers/St9k8POQKNZsfCK4GnvL",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"racers",
+						"St9k8POQKNZsfCK4GnvL"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
