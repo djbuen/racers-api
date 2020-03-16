@@ -1,29 +1,29 @@
-#use ruby 2.5.3
-#use postman (>7.6.0)
-#use bundler (1.17.3)
+use ruby 2.5.3
+use postman (>7.6.0)
+use bundler (1.17.3)
 
 #STEPS
-#1. unzip project racers.zip(example location /var/www/racers-api) or clone https://github.com/djbuen/racers-api.git 
-#2. update path constant for google firestore credential in .env file(line 2);
-# sample:
-# export GOOGLE_APPLICATION_CREDENTIALS="[PATH_WHERE_YOU_UNZIP_PROJECT]/racers-api/cred2.json" -> export GOOGLE_APPLICATION_CREDENTIALS="/var/www/racers-api/cred2.json"
-#3. install ruby 2.5.3
-#4. install bundler
-#5. run `bundle install` in root folder
-#6.1 run `rake db:migrate`
-#7. run `source .env && rails s`
+1. unzip project racers.zip(example location /var/www/racers-api) or clone https://github.com/djbuen/racers-api.git 
+2. update path constant for google firestore credential in .env file(line 2);
+ sample:
+ export GOOGLE_APPLICATION_CREDENTIALS="[PATH_WHERE_YOU_UNZIP_PROJECT]/racers-api/cred2.json" -> export GOOGLE_APPLICATION_CREDENTIALS="/var/www/racers-api/cred2.json"
+3. install ruby 2.5.3
+4. install bundler
+5. run `bundle install` in root folder
+6. run `rake db:migrate`
+7. run `source .env && rails s`
 # once the server is started can play endpoints via postman	
-#8. download postman
-#9. import racers.postman_collection.json
-#10. play around with endpoint
+8. download postman
+9. import racers.postman_collection.json
+10. play around with endpoint
 #NOTE: when playing around with endpoints will take some time in responding max 1.5minute
-#11. can navigate to https://console.firebase.google.com/u/2/project/xclimb-92d8c/database/firestore/data~2Fracers~2FaBqcaPxBAwhNlVLERdBP
+11. can navigate to https://console.firebase.google.com/u/2/project/xclimb-92d8c/database/firestore/data~2Fracers~2FaBqcaPxBAwhNlVLERdBP
 #login using credentials given below
 ## firestore account
 ## username: dave.xclimb@gmail.com
 ## pass: xclimb2020
-#12. check for data being manipulated through api
-#13. please let me know if there are any issues dave.buenconsejo@gmail.com / telegram: 09663675297
+12. check for data being manipulated through api
+13. please let me know if there are any issues dave.buenconsejo@gmail.com / telegram: 09663675297
 
 #Test via curl client sample
 # racer list
