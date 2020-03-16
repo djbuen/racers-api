@@ -9,16 +9,28 @@ class RacersController < ApplicationController
         racer = Racer.new racer_params
         if racer.create
             flash[:success] = "Added racer"
+            status = :ok
         else
             flash[:error] = "Unable to add racer"
+            status = :expectation_failed
         end
-        render json: flash, status: :ok
+        render json: flash, status: status
     end
 
     def update
     end
 
     def destroy
+        flash = {}
+        racer = Racer.find params[:id]
+        if racer&.delete
+            flash[:success] = "Deleted racer"
+            status = :ok
+        else
+            flash[:error] = "Unable to delete racer"
+            status = :expectation_failed
+        end
+        render json: flash, status: status
     end
 
     private
