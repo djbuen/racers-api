@@ -38,6 +38,13 @@ class Racer
     save
   end
 
+  def update params
+    params.each do |name, value|
+      send "#{name}=", value if respond_to? "#{name}="
+    end
+    save
+  end
+
   def save
     if valid?
       racer_ref = Racer.collection.doc racer_id

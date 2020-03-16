@@ -18,6 +18,16 @@ class RacersController < ApplicationController
     end
 
     def update
+        flash = {}
+        racer = Racer.find params[:id]
+        if racer&.update racer_params
+            flash[:success] = "Updated racer"
+            status = :ok
+        else
+            flash[:error] = "Unable to update racer"
+            status = :expectation_failed
+        end
+        render json: flash, status: status
     end
 
     def destroy
