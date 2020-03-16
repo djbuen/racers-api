@@ -8,6 +8,7 @@
 #1. install ruby 2.5.3
 #2. install bundler
 #3. run `bundle install` in root folder
+#3.1 run `rake db:migrate`
 #4. source notes && rails s 
 # once the server is started can play endpoints via postman	
 #5. download postman
