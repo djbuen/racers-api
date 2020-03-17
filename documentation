@@ -1,0 +1,68 @@
+Racer API Restful Routes Documentation
+
+# racer list
+curl -X GET https://xclimb-fire.appspot.com/racers
+
+# add racer (/racers)
+# then pass first_name and last_name
+# no need to pass racer_id, bib_number is auto generated
+curl -X POST \
+  https://xclimb-fire.appspot.com/racers \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 46' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:3000' \
+  -H 'Postman-Token: 7c167d23-338e-4598-b5f8-1309a3249f98,1da70f3b-d4b9-431c-8959-42c318931abd' \
+  -H 'User-Agent: PostmanRuntime/7.16.3' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"first_name": "dave",
+	"last_name": "san"
+	}'
+
+# update race
+# can update by racer_id (/racers/:racer_id)
+# then pass first_name and last_name
+# no need to pass racer_id, bib_number is auto generated
+ curl -X PUT \
+  https://xclimb-fire.appspot.com/racers/aBqcaPxBAwhNlVLERdBP \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 46' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:3000' \
+  -H 'Postman-Token: 060e7532-9850-4c97-9253-437151ef769e,1882c190-99d9-4c44-a5ea-78424b53bf9f' \
+  -H 'User-Agent: PostmanRuntime/7.16.3' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"first_name": "dave",
+	"last_name": "son"
+	}'
+
+# delete racer
+# can delete by racer_id (/racers/:racer_id)
+curl -X DELETE \
+  https://xclimb-fire.appspot.com/racers/St9k8POQKNZsfCK4GnvL \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: ' \
+  -H 'Host: localhost:3000' \
+  -H 'Postman-Token: 131ccb6d-cb7b-4ffb-9617-e7ab6c9f77a2,99cd6eb9-cd40-47bf-9e12-a8dd98e1d610' \
+  -H 'User-Agent: PostmanRuntime/7.16.3' \
+  -H 'cache-control: no-cache'
+
+#Routes
+#  Prefix Verb   URI Pattern             Controller#Action
+#  racers GET    /racers(.:format)       racers#index
+#  POST          /racers(.:format)       racers#create
+#  racer  GET    /racers/:id(.:format)   racers#show
+#  PATCH         /racers/:id(.:format)   racers#update
+#  PUT           /racers/:id(.:format)   racers#update
+#  DELETE        /racers/:id(.:format)   racers#destroy
