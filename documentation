@@ -56,8 +56,8 @@ curl -X DELETE \
 #Routes
 #  Prefix Verb   URI Pattern             Controller#Action
 #  racers GET    /racers(.:format)       racers#index
-#  POST          /racers(.:format)       racers#create
+#         POST   /racers(.:format)       racers#create
 #  racer  GET    /racers/:id(.:format)   racers#show
-#  PATCH         /racers/:id(.:format)   racers#update
-#  PUT           /racers/:id(.:format)   racers#update
-#  DELETE        /racers/:id(.:format)   racers#destroy
+#         PATCH  /racers/:id(.:format)   racers#update
+#         PUT    /racers/:id(.:format)   racers#update
+#         DELETE /racers/:id(.:format)   racers#destroy
